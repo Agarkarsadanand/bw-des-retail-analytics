@@ -44,27 +44,3 @@ class SnowflakeConnector:
         if self.connection:
             self.connection.close()
 
-# Example usage:
-
-# Replace these with your Snowflake account details
-user = "Sadanand"
-password = "Sada@1234"
-account = "ZPQVWVF-XVB45506"
-warehouse = "COMPUTE_WH"
-database = "SNOWFLAKE_SAMPLE_DATA"
-schema = "TPCDS_SF10TCL"
-
-# Create an instance of SnowflakeConnector
-snowflake_conn = SnowflakeConnector(account, user, password, warehouse, database, schema)
-
-# Connect to Snowflake
-snowflake_conn.connect()
-
-# Execute a query
-query_result = snowflake_conn.execute_query("SELECT * FROM SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CALL_CENTER;")
-print(query_result)
-# Print the result
-print("Current Date in Snowflake:", query_result[0][0])
-
-# Close the connection
-snowflake_conn.close_connection()
