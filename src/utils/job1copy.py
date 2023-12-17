@@ -6,7 +6,7 @@ from snowutil import SnowflakeConnector
 
 # Set your Vault URL, role_id, and secret_id
 vault_url = "http://127.0.0.1:8200"
-role_id = "7674ac31-c26e-04b4-560a-51c3f2f84b56"
+role_id = "97674ac31-c26e-04b4-560a-51c3f2f84b56"
 secret_id = "b82db2ac-9dda-a38c-fe38-d7389666f78b"
 secret_path = "secret/data/aws"
 
@@ -52,7 +52,7 @@ else:
     print("Failed to authenticate with AppRole.")
 
 aws_access_key = secret_data['data']['bw-aws-accesskey-dev']
-aws_secret_key = secret_data['data']['bw-aws-secret-dev']
+aws_secret_key = secret_data['data']['bw-aws-secretkey-dev']
 
 region = 'us-east-1'  # Replace with your preferred AWS region
 
@@ -100,7 +100,7 @@ database = "SNOWFLAKE_SAMPLE_DATA"
 schema = "TPCDS_SF10TCL"
 
 # Create an instance of SnowflakeConnector
-snowflake_conn = SnowflakeConnector(account, user, password, warehouse, database, schema)
+snowflake_conn = SnowflakeConnector(account, password, warehouse, database, schema)
 
 # Connect to Snowflake
 snowflake_conn.connect()

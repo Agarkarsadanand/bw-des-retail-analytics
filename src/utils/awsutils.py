@@ -3,8 +3,8 @@ from vaultutils import VaultCredentialsManager
 
 # Set your Vault URL, role_id, and secret_id
 vault_url = "http://127.0.0.1:8200"
-role_id = "7674ac31-c26e-04b4-560a-51c3f2f84b56"
-secret_id = "b82db2ac-9dda-a38c-fe38-d7389666f78b"
+role_id = "973814ff-8e7d-d52c-440c-834f746d155a"
+secret_id = "00f1d936-0b93-28ef-2dd0-f257b06bcc22"
 secret_path = "secret/data/aws"
 
 # Create an instance of the VaultCredentialsManager
